@@ -14,6 +14,13 @@ int main(int argc, char *argv[]) {
 	} else if (rc == 0) {
 		printf("I am the child process and x is %d \n", x);
 
+		/*
+
+		Learned how to use the exec functions thanks to
+		https://www.geeksforgeeks.org/exec-family-of-functions-in-c/
+
+		*/
+
 		char const *envp[] = {NULL};
 	        char *args[] = {"/bin/ls", NULL};
 
